@@ -1,5 +1,24 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+#prices {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping to the next line if there are too many collections */
+    justify-content: space-between; /* Space between collections */
+}
+
 .collection {
-    margin-bottom: 40px;
+    flex: 1 1 30%; /* Allow each collection to take up to 30% of the container width */
+    margin: 10px; /* Space between collections */
+    border: 1px solid #ddd; /* Optional: border around collections */
+    border-radius: 5px; /* Optional: rounded corners */
+    padding: 10px; /* Optional: padding inside the collection */
 }
 
 .collection-header {
