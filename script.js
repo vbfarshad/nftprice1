@@ -1,17 +1,18 @@
-// Grab the table body element where NFT data will be inserted
-const tableBody = document.querySelector("#nft-table tbody");
-
 // Your API key from Reservoir
 const apiKey = 'a5d354d5-d348-5802-be9a-147a5dd5caa8';  // Your actual API key
 
-// Define the NFT collection contracts to fetch data from
+// Define the NFT collection contracts and corresponding table IDs
 const collections = [
-    '0xBC4CA0EdA7647A8aB7C2061c2E118A18a936f13D', // Bored Ape Yacht Club (BAYC)
-    '0x8a90cab2b38dba80c64b7734e58ee1db38b8992e'  // Doodles
+    { contract: '0xBC4CA0EdA7647A8aB7C2061c2E118A18a936f13D', tableId: 'bayc-table' }, // BAYC
+    { contract: '0x8a90cab2b38dba80c64b7734e58ee1db38b8992e', tableId: 'doodles-table' }, // Doodles
+    { contract: '0x1A92f7381B9F03921564a437210bB9396471050C', tableId: 'coolcats-table' }, // Cool Cats
+    { contract: '0xED5AF388653567Af2F388E6224dC7C4b3241C544', tableId: 'azuki-table' }  // Azuki
 ];
 
 // Function to fetch NFT data from Reservoir API for each collection
-collections.forEach(contract => {
+collections.forEach(({ contract, tableId }) => {
+    const tableBody = document.querySelector(`#${tableId} tbody`);
+
     fetch(`https://api.reservoir.tools/tokens/v5?collection=${contract}`, {
         headers: {
             'x-api-key': apiKey  // Pass the API key in the headers
