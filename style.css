@@ -1,37 +1,34 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
+.collection {
+    margin-bottom: 40px;
 }
 
-header {
-    text-align: center;
-    margin-bottom: 20px;
+.collection-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.collection-header img {
+    margin-right: 10px;
+}
+
+.collection-header h2 {
+    font-size: 24px;
+    margin: 0;
 }
 
 table {
     width: 100%;
     border-collapse: collapse;
-    margin: 20px 0;
+    margin-bottom: 20px;
 }
 
-table th, table td {
+th, td {
     padding: 10px;
+    border: 1px solid #ddd;
     text-align: left;
 }
 
-table th {
-    background-color: #f2f2f2;
-}
-
-table td img {
-    display: block;
-    margin: 0 auto;
-}
-
-table td a {
-    text-decoration: none;
-}
-
-table td a img {
-    margin-right: 5px;
+tbody tr:hover {
+    background-color: #f1f1f1;
 }
