@@ -4,103 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NFT Price Tracker</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-wrap: wrap;  /* Make the tables sit side-by-side */
-            justify-content: space-around; /* Add space between tables */
-        }
-        table {
-            border-collapse: collapse;
-            width: 300px;
-            margin: 20px;
-            text-align: left;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
-        }
-        th {
-            background-color: #f2f2f2;
-        }
-        img {
-            border-radius: 4px;
-        }
-        .collection-container {
-            flex: 1;
-            min-width: 300px;
-        }
-        .collection-header {
-            text-align: center;
-            font-size: 18px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
 </head>
 <body>
-    <!-- These divs will hold separate tables for each collection -->
-    <div id="bayc-container" class="collection-container">
-        <div class="collection-header">Bored Ape Yacht Club (BAYC)</div>
-        <table id="bayc-table">
-            <thead>
-                <tr>
-                    <th>Image</th>
-                    <th>Token</th>
-                    <th>Price (ETH)</th>
-                    <th>Marketplaces</th>
-                </tr>
-            </thead>
-            <tbody></tbody>
-        </table>
-    </div>
-
-    <div id="doodles-container" class="collection-container">
-        <div class="collection-header">Doodles</div>
-        <table id="doodles-table">
-            <thead>
-                <tr>
-                    <th>Image</th>
-                    <th>Token</th>
-                    <th>Price (ETH)</th>
-                    <th>Marketplaces</th>
-                </tr>
-            </thead>
-            <tbody></tbody>
-        </table>
-    </div>
-
-    <div id="coolcats-container" class="collection-container">
-        <div class="collection-header">Cool Cats</div>
-        <table id="coolcats-table">
-            <thead>
-                <tr>
-                    <th>Image</th>
-                    <th>Token</th>
-                    <th>Price (ETH)</th>
-                    <th>Marketplaces</th>
-                </tr>
-            </thead>
-            <tbody></tbody>
-        </table>
-    </div>
-
-    <div id="azuki-container" class="collection-container">
-        <div class="collection-header">Azuki</div>
-        <table id="azuki-table">
-            <thead>
-                <tr>
-                    <th>Image</th>
-                    <th>Token</th>
-                    <th>Price (ETH)</th>
-                    <th>Marketplaces</th>
-                </tr>
-            </thead>
-            <tbody></tbody>
-        </table>
-    </div>
-
-    <script src="script.js"></script>
+    <h1>NFT Price Tracker</h1>
+    <div id="prices"></div> <!-- Container for the NFT prices and collections -->
+    
+    <script src="script.js"></script> <!-- Link to your JavaScript file -->
 </body>
 </html>
